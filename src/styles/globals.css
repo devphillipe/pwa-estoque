@@ -1,4 +1,41 @@
 /* Definindo estilos globais */
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    .auth-container,
+    .product-register {
+      width: 90%; /* Reduz a largura do contêiner em telas menores */
+      padding: 20px; /* Ajusta o padding */
+    }
+  
+    .product-list {
+      padding: 10px; /* Reduz o padding nas listagens */
+    }
+  
+    input, button {
+      padding: 10px; /* Ajusta o padding dos inputs e botões */
+      font-size: 14px; /* Reduz o tamanho da fonte para melhor legibilidade */
+    }
+  
+    button {
+      font-size: 16px; /* Aumenta um pouco o tamanho da fonte dos botões */
+    }
+  
+    .search-bar input,
+    .filter-by-date input {
+      padding: 8px; /* Ajusta o padding nos inputs de pesquisa e filtro */
+    }
+  
+    .product-list div {
+      flex-direction: column; /* Alinha os itens em coluna para melhor leitura */
+      align-items: flex-start; /* Alinha os itens à esquerda */
+    }
+  
+    button.edit, button.delete {
+      width: 100%; /* Faz os botões ocupar toda a largura */
+      margin-top: 10px; /* Adiciona espaço entre os botões */
+    }
+  }
+  
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
