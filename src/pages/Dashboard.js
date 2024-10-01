@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import ProductRegister from './ProductRegister';
 import ProductList from '../components/ProductList';
-import SearchBar from '../components/SearchBar';
+import ProductRegister from './ProductRegister';
 import FilterByDate from '../components/FilterByDate';
+import SearchBar from '../components/SearchBar';
 
 const Dashboard = () => {
   const [products, setProducts] = useState([]);
@@ -14,13 +14,12 @@ const Dashboard = () => {
   };
 
   const deleteProduct = (index) => {
-    setProducts(products.filter((_, i) => i !== index));
+    const newProducts = products.filter((_, i) => i !== index);
+    setProducts(newProducts);
   };
 
   const editProduct = (index, updatedProduct) => {
-    const newProducts = products.map((product, i) =>
-      i === index ? updatedProduct : product
-    );
+    const newProducts = products.map((product, i) => (i === index ? updatedProduct : product));
     setProducts(newProducts);
   };
 
@@ -31,7 +30,7 @@ const Dashboard = () => {
   });
 
   return (
-    <div>
+    <div className="dashboard">
       <ProductRegister onAddProduct={addProduct} />
       <SearchBar value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
       <FilterByDate value={filterDate} onChange={(e) => setFilterDate(e.target.value)} />

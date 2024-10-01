@@ -12,7 +12,6 @@ const ProductList = ({ products, onDelete, onEdit }) => {
                         <span>{product.quantity} unidades</span>
                         <span>{product.expiryDate || 'Sem vencimento'}</span>
                         <div>
-                            <button className="edit" onClick={() => onEdit(index)}>Editar</button>
                             <button className="delete" onClick={() => onDelete(index)}>Excluir</button>
                         </div>
                     </div>

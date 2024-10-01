@@ -4,175 +4,120 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-}
-
-/* Container da página de autenticação e cadastro */
-.auth-container,
-.product-register {
-    max-width: 500px;
+  }
+  
+  /* Container da página de autenticação e cadastro */
+  .auth-container,
+  .product-register {
+    max-width: 90%; /* Mantém a largura responsiva */
     margin: 40px auto;
-    padding: 30px; /* Padding interno */
-    padding-left: 20px; /* Padding extra nas laterais */
-    padding-right: 20px; /* Padding extra nas laterais */
+    padding: 30px;
     border-radius: 10px;
-    color: #ffffff;
-}
-
-.auth-container img,
-.product-register img {
+    color: #000000; /* Altera a cor do texto para preto */
+  }
+  
+  /* Ajuste para a logo */
+  .auth-container img,
+  .product-register img {
     display: block;
     margin: 0 auto 20px;
-    max-width: 100%;
-    height: auto;
-    max-height: 150px;
-}
-
-input,
-button {
-    width: 100%;
-    padding: 12px; /* Mantendo o padding */
-    margin-bottom: 15px;
+    max-width: 100%; /* Ajusta a largura da imagem */
+    height: auto; /* Mantém a proporção */
+    max-height: 150px; /* Limita a altura */
+  }
+  
+  /* Alinhamento dos campos e botões */
+  input,
+  button {
+    width: 100%; /* Garante que os botões e inputs ocupem 100% do contêiner */
+    max-width: 400px; /* Limita a largura máxima */
+    padding: 12px;
+    margin: 10px auto; /* Centraliza verticalmente */
     font-size: 16px;
     border-radius: 5px;
-}
-
-/* Estilo dos campos de entrada */
-input {
-    border: 2px solid #FFD300;
-    background-color: #f4f4f4;
-}
-
-input:focus {
-    border-color: #FFD300;
+    display: block; /* Para garantir o centralizado */
+  }
+  
+  /* Estilo dos campos de entrada */
+  input {
+    border: 2px solid #FFD300; /* Mantém a borda amarela */
+    background-color: #ffffff; /* Fundo branco para os campos */
+  }
+  
+  input:focus {
+    border-color: #FFD300; /* Mantém a borda amarela ao focar */
     outline: none;
-}
-
-/* Estilo dos botões */
-button {
-    background-color: #FFD300;
+  }
+  
+  /* Estilo dos botões */
+  button {
+    background-color: #FFD300; /* Fundo amarelo para os botões */
     border: none;
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s ease;
-    padding: 12px; /* Mantendo o padding */
-}
-
-button:hover {
-    background-color: #e6b800;
-}
-
-/* Layout para as listagens */
-.product-list {
-    max-width: 800px;
+  }
+  
+  button:hover {
+    background-color: #e6b800; /* Cor ao passar o mouse */
+  }
+  
+  /* Layout para as listagens */
+  .product-list {
+    max-width: 90%; /* Ajusta para usar 90% da largura da tela */
     margin: 20px auto;
     padding: 20px;
     border-radius: 10px;
-    color: #000000;
-    padding-left: 20px; /* Padding extra nas laterais */
-    padding-right: 20px; /* Padding extra nas laterais */
-}
-
-.product-list div {
+    color: #000000; /* Altera a cor do texto para preto */
+  }
+  
+  /* Divisões de produtos */
+  .product-list div {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 15px;
     padding-bottom: 10px;
     border-bottom: 1px solid #FFD300;
-}
-
-.product-list div:last-child {
+  }
+  
+  .product-list div:last-child {
     border-bottom: none;
-}
-
-button.edit,
-button.delete {
+  }
+  
+  button.edit,
+  button.delete {
     margin-left: 10px;
-}
-
-button.edit {
+  }
+  
+  button.edit {
     background-color: #FFD300;
-}
-
-button.delete {
+  }
+  
+  button.delete {
     background-color: #ff4d4d;
     color: #ffffff;
-}
-
-button.delete:hover {
+  }
+  
+  button.delete:hover {
     background-color: #e60000;
-}
-
-/* Barra de pesquisa e filtro */
-.search-bar,
-.filter-by-date {
+  }
+  
+  /* Barra de pesquisa e filtro */
+  .search-bar,
+  .filter-by-date {
     display: block;
-    width: 100%;
-    max-width: 800px;
+    width: 100%; /* Garante que a barra de pesquisa e filtro ocupem 100% */
     margin: 10px auto 20px;
-}
-
-.search-bar input,
-.filter-by-date input {
-    width: 100%;
-    padding: 10px; /* Ajustando o padding */
+  }
+  
+  .search-bar input,
+  .filter-by-date input {
+    width: 100%; /* Garante que os inputs ocupem 100% */
+    max-width: 400px; /* Limita a largura máxima */
+    padding: 10px;
     font-size: 16px;
-    border: 2px solid #FFD300;
+    border: 2px solid #FFD300; /* Mantém a borda amarela */
     border-radius: 5px;
-}
-
-/* Media Queries para responsividade */
-@media (max-width: 768px) {
-    .auth-container,
-    .product-register {
-        padding: 20px; /* Ajustando o padding */
-        padding-left: 15px; /* Padding extra nas laterais */
-        padding-right: 15px; /* Padding extra nas laterais */
-    }
-
-    input,
-    button {
-        padding: 10px; /* Mantendo o padding */
-        font-size: 14px;
-    }
-
-    .product-list {
-        padding: 10px; /* Ajustando o padding */
-        padding-left: 15px; /* Padding extra nas laterais */
-        padding-right: 15px; /* Padding extra nas laterais */
-    }
-
-    .product-list div {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    button.edit,
-    button.delete {
-        margin-left: 0;
-        margin-top: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .auth-container,
-    .product-register {
-        margin: 20px auto;
-        padding: 15px; /* Ajustando o padding */
-        padding-left: 10px; /* Padding extra nas laterais */
-        padding-right: 10px; /* Padding extra nas laterais */
-    }
-
-    input,
-    button {
-        padding: 8px; /* Mantendo o padding */
-        font-size: 12px;
-    }
-
-    .product-list {
-        margin: 10px auto;
-        padding: 5px; /* Ajustando o padding */
-        padding-left: 10px; /* Padding extra nas laterais */
-        padding-right: 10px; /* Padding extra nas laterais */
-    }
-}
+  }
+  
