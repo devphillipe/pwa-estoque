@@ -3,15 +3,21 @@ import React from 'react';
 const ProductList = ({ products, onDelete, onEdit }) => {
   return (
     <div className="product-list">
-      {products.map((product, index) => (
-        <div key={index} className="product-item">
-          <span>{product.name}</span>
-          <span>{product.quantity}</span>
-          <span>{product.expiryDate || 'Sem vencimento'}</span>
-          <button onClick={() => onEdit(index)}>Editar</button>
-          <button onClick={() => onDelete(index)}>Excluir</button>
-        </div>
-      ))}
+      {products.length === 0 ? (
+        <p>Nenhum produto cadastrado.</p>
+      ) : (
+        products.map((product, index) => (
+          <div key={index}>
+            <span><strong>{product.name}</strong></span>
+            <span>{product.quantity} unidades</span>
+            <span>{product.expiryDate || 'Sem vencimento'}</span>
+            <div>
+              <button className="edit" onClick={() => onEdit(index)}>Editar</button>
+              <button className="delete" onClick={() => onDelete(index)}>Excluir</button>
+            </div>
+          </div>
+        ))
+      )}
     </div>
   );
 };

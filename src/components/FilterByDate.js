@@ -2,12 +2,13 @@ import React from 'react';
 
 const FilterByDate = ({ value, onChange }) => {
   return (
-    <input
-      type="date"
-      value={value}
-      onChange={onChange}
-      placeholder="Filtrar por data de vencimento"
-    />
+    <div className="filter-by-date">
+      <input
+        type="date"
+        value={value}
+        onChange={onChange}
+      />
+    </div>
   );
 };
 

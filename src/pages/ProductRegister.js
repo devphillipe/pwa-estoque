@@ -15,7 +15,7 @@ const ProductRegister = ({ onAddProduct }) => {
 
   return (
     <div className="product-register">
-      <img src="/logo.png" alt="Marmoraria Revelar Logo" />
+      <img src="/logo.png" alt="Logo Marmoraria Revelar" />
       <form onSubmit={handleSubmit}>
         <input
           type="text"

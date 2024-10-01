@@ -1,35 +1,125 @@
+/* Definindo estilos globais */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
   }
   
-  .auth-container, .product-register, .product-list {
+  /* Container da página de autenticação e cadastro */
+  .auth-container,
+  .product-register {
     max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: white;
+    margin: 40px auto;
+    padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
   }
   
-  input, button {
+  .auth-container img,
+  .product-register img {
     display: block;
+    margin: 0 auto 20px;
+    max-width: 100%; /* Ajusta a largura da imagem para não ultrapassar o contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    max-height: 150px; /* Limita a altura máxima da imagem */
+  }
+  .auth-container h2 {
+    text-align: center; /* Centraliza o texto */
+    color: #000000; /* Cor dourada para destacar */
+    margin-top: 10px; /* Espaço acima do título */
+    font-size: 24px; /* Ajuste o tamanho da fonte conforme necessário */
+  }
+ 
+  
+  input,
+  button {
     width: 100%;
-    margin-bottom: 10px;
-    padding: 10px;
+    padding: 12px;
+    margin-bottom: 15px;
     font-size: 16px;
+    border-radius: 5px;
   }
   
+  /* Estilo dos campos de entrada */
+  input {
+    border: 2px solid #FFD300;
+    background-color: #f4f4f4;
+  }
+  
+  input:focus {
+    border-color: #FFD300;
+    outline: none;
+  }
+  
+  /* Estilo dos botões */
   button {
-    background-color: #007bff;
-    color: white;
+    background-color: #FFD300;
     border: none;
     cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
   }
   
   button:hover {
-    background-color: #0056b3;
+    background-color: #e6b800;
+  }
+  
+  /* Layout para as listagens */
+  .product-list {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    color: #000000;
+  }
+  
+  .product-list div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #FFD300;
+  }
+  
+  .product-list div:last-child {
+    border-bottom: none;
+  }
+  
+  button.edit,
+  button.delete {
+    margin-left: 10px;
+  }
+  
+  button.edit {
+    background-color: #FFD300;
+  }
+  
+  button.delete {
+    background-color: #ff4d4d;
+    color: #ffffff;
+  }
+  
+  button.delete:hover {
+    background-color: #e60000;
+  }
+  
+  /* Barra de pesquisa e filtro */
+  .search-bar,
+  .filter-by-date {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    margin: 10px auto 20px;
+  }
+  
+  .search-bar input,
+  .filter-by-date input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #FFD300;
+    border-radius: 5px;
   }
   
