@@ -28,7 +28,7 @@ body {
 input,
 button {
     width: 100%;
-    padding: 12px;
+    padding: 12px; /* Mantendo o padding */
     margin-bottom: 15px;
     font-size: 16px;
     border-radius: 5px;
@@ -52,6 +52,7 @@ button {
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s ease;
+    padding: 12px; /* Mantendo o padding */
 }
 
 button:hover {
@@ -110,7 +111,7 @@ button.delete:hover {
 .search-bar input,
 .filter-by-date input {
     width: 100%;
-    padding: 10px;
+    padding: 10px; /* Ajustando o padding */
     font-size: 16px;
     border: 2px solid #FFD300;
     border-radius: 5px;
@@ -125,7 +126,7 @@ button.delete:hover {
 
     input,
     button {
-        padding: 10px;
+        padding: 10px; /* Mantendo o padding */
         font-size: 14px;
     }
 
@@ -154,7 +155,7 @@ button.delete:hover {
 
     input,
     button {
-        padding: 8px;
+        padding: 8px; /* Mantendo o padding */
         font-size: 12px;
     }
 

@@ -11,7 +11,6 @@ const Auth = ({ onLogin }) => {
   return (
     <div className="auth-container">
       <img src="/logo.png" alt="Logo Marmoraria Revelar" />
-      <h2>Tela de Autenticação</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="password"
