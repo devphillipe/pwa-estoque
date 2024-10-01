@@ -11,7 +11,9 @@ body {
 .product-register {
     max-width: 500px;
     margin: 40px auto;
-    padding: 30px;
+    padding: 30px; /* Padding interno */
+    padding-left: 20px; /* Padding extra nas laterais */
+    padding-right: 20px; /* Padding extra nas laterais */
     border-radius: 10px;
     color: #ffffff;
 }
@@ -66,6 +68,8 @@ button:hover {
     padding: 20px;
     border-radius: 10px;
     color: #000000;
+    padding-left: 20px; /* Padding extra nas laterais */
+    padding-right: 20px; /* Padding extra nas laterais */
 }
 
 .product-list div {
@@ -121,7 +125,9 @@ button.delete:hover {
 @media (max-width: 768px) {
     .auth-container,
     .product-register {
-        padding: 20px;
+        padding: 20px; /* Ajustando o padding */
+        padding-left: 15px; /* Padding extra nas laterais */
+        padding-right: 15px; /* Padding extra nas laterais */
     }
 
     input,
@@ -131,7 +137,9 @@ button.delete:hover {
     }
 
     .product-list {
-        padding: 10px;
+        padding: 10px; /* Ajustando o padding */
+        padding-left: 15px; /* Padding extra nas laterais */
+        padding-right: 15px; /* Padding extra nas laterais */
     }
 
     .product-list div {
@@ -150,7 +158,9 @@ button.delete:hover {
     .auth-container,
     .product-register {
         margin: 20px auto;
-        padding: 15px;
+        padding: 15px; /* Ajustando o padding */
+        padding-left: 10px; /* Padding extra nas laterais */
+        padding-right: 10px; /* Padding extra nas laterais */
     }
 
     input,
@@ -161,6 +171,8 @@ button.delete:hover {
 
     .product-list {
         margin: 10px auto;
-        padding: 5px;
+        padding: 5px; /* Ajustando o padding */
+        padding-left: 10px; /* Padding extra nas laterais */
+        padding-right: 10px; /* Padding extra nas laterais */
     }
 }
