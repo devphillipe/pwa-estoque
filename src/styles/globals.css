@@ -1,162 +1,165 @@
 /* Definindo estilos globais */
-/* Ajustes para dispositivos móveis */
-@media (max-width: 768px) {
-    .auth-container,
-    .product-register {
-      width: 90%; /* Reduz a largura do contêiner em telas menores */
-      padding: 20px; /* Ajusta o padding */
-    }
-  
-    .product-list {
-      padding: 10px; /* Reduz o padding nas listagens */
-    }
-  
-    input, button {
-      padding: 10px; /* Ajusta o padding dos inputs e botões */
-      font-size: 14px; /* Reduz o tamanho da fonte para melhor legibilidade */
-    }
-  
-    button {
-      font-size: 16px; /* Aumenta um pouco o tamanho da fonte dos botões */
-    }
-  
-    .search-bar input,
-    .filter-by-date input {
-      padding: 8px; /* Ajusta o padding nos inputs de pesquisa e filtro */
-    }
-  
-    .product-list div {
-      flex-direction: column; /* Alinha os itens em coluna para melhor leitura */
-      align-items: flex-start; /* Alinha os itens à esquerda */
-    }
-  
-    button.edit, button.delete {
-      width: 100%; /* Faz os botões ocupar toda a largura */
-      margin-top: 10px; /* Adiciona espaço entre os botões */
-    }
-  }
-  
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-  }
-  
-  /* Container da página de autenticação e cadastro */
-  .auth-container,
-  .product-register {
+}
+
+/* Container da página de autenticação e cadastro */
+.auth-container,
+.product-register {
     max-width: 500px;
     margin: 40px auto;
     padding: 30px;
     border-radius: 10px;
     color: #ffffff;
-  }
-  
-  .auth-container img,
-  .product-register img {
+}
+
+.auth-container img,
+.product-register img {
     display: block;
     margin: 0 auto 20px;
-    max-width: 100%; /* Ajusta a largura da imagem para não ultrapassar o contêiner */
-    height: auto; /* Mantém a proporção da imagem */
-    max-height: 150px; /* Limita a altura máxima da imagem */
-  }
-  .auth-container h2 {
-    text-align: center; /* Centraliza o texto */
-    color: #000000; /* Cor dourada para destacar */
-    margin-top: 10px; /* Espaço acima do título */
-    font-size: 24px; /* Ajuste o tamanho da fonte conforme necessário */
-  }
- 
-  
-  input,
-  button {
+    max-width: 100%;
+    height: auto;
+    max-height: 150px;
+}
+
+input,
+button {
     width: 100%;
     padding: 12px;
     margin-bottom: 15px;
     font-size: 16px;
     border-radius: 5px;
-  }
-  
-  /* Estilo dos campos de entrada */
-  input {
+}
+
+/* Estilo dos campos de entrada */
+input {
     border: 2px solid #FFD300;
     background-color: #f4f4f4;
-  }
-  
-  input:focus {
+}
+
+input:focus {
     border-color: #FFD300;
     outline: none;
-  }
-  
-  /* Estilo dos botões */
-  button {
+}
+
+/* Estilo dos botões */
+button {
     background-color: #FFD300;
     border: none;
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
+}
+
+button:hover {
     background-color: #e6b800;
-  }
-  
-  /* Layout para as listagens */
-  .product-list {
+}
+
+/* Layout para as listagens */
+.product-list {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
     border-radius: 10px;
     color: #000000;
-  }
-  
-  .product-list div {
+}
+
+.product-list div {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 15px;
     padding-bottom: 10px;
     border-bottom: 1px solid #FFD300;
-  }
-  
-  .product-list div:last-child {
+}
+
+.product-list div:last-child {
     border-bottom: none;
-  }
-  
-  button.edit,
-  button.delete {
+}
+
+button.edit,
+button.delete {
     margin-left: 10px;
-  }
-  
-  button.edit {
+}
+
+button.edit {
     background-color: #FFD300;
-  }
-  
-  button.delete {
+}
+
+button.delete {
     background-color: #ff4d4d;
     color: #ffffff;
-  }
-  
-  button.delete:hover {
+}
+
+button.delete:hover {
     background-color: #e60000;
-  }
-  
-  /* Barra de pesquisa e filtro */
-  .search-bar,
-  .filter-by-date {
+}
+
+/* Barra de pesquisa e filtro */
+.search-bar,
+.filter-by-date {
     display: block;
     width: 100%;
     max-width: 800px;
     margin: 10px auto 20px;
-  }
-  
-  .search-bar input,
-  .filter-by-date input {
+}
+
+.search-bar input,
+.filter-by-date input {
     width: 100%;
     padding: 10px;
     font-size: 16px;
     border: 2px solid #FFD300;
     border-radius: 5px;
-  }
-  
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    .auth-container,
+    .product-register {
+        padding: 20px;
+    }
+
+    input,
+    button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .product-list {
+        padding: 10px;
+    }
+
+    .product-list div {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    button.edit,
+    button.delete {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-container,
+    .product-register {
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    input,
+    button {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .product-list {
+        margin: 10px auto;
+        padding: 5px;
+    }
+}
